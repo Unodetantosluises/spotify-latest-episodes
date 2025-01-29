@@ -21,16 +21,27 @@ def get_recent_episodes_from_podcast(sp, podcast_id):
         podcast = sp.show(podcast_id)
         podcast_name = podcast['name']  # Nombre del podcast
 
-        # Obtenemos los episodios más recientes del podcast
-        episodes = sp.show_episodes(podcast_id, limit=1)  # Limitamos a 1 episodio reciente
+        # Obtenemos los episodios más recientes del podcast (primero con limit=1)
+        episodes = sp.show_episodes(podcast_id, limit=1, market="ES")
         
-        if not episodes or 'items' not in episodes:
+        # Si no hay episodios, probamos con limit=2
+        if not episodes or 'items' not in episodes or episodes['items'][0] is None:
+            print(f"⚠️ No se encontró un episodio válido con limit=1. Intentando con limit=2...")
+            episodes = sp.show_episodes(podcast_id, limit=2, market="ES")
+        
+        if not episodes or 'items' not in episodes or not any(episodes['items']):
             print(f"⚠️ No se encontraron episodios para el podcast {podcast_name}.")
             return []
         
+        # Filtramos el primer episodio válido
+        recent_episode = next((episode for episode in episodes['items'] if episode), None)
+        if not recent_episode:
+            print(f"⚠️ No se encontraron episodios válidos para el podcast {podcast_name}.")
+            return []
+
         # Sacamos el URI y nombre del episodio más reciente
-        recent_episode_uri = episodes['items'][0]['uri']
-        recent_episode_name = episodes['items'][0]['name']  # Nombre del episodio
+        recent_episode_uri = recent_episode['uri']
+        recent_episode_name = recent_episode['name']  # Nombre del episodio
         
         # Mostrar el nombre del podcast y el nombre del episodio
         print(f"🎧 Podcast: {podcast_name} | Episodio más reciente: {recent_episode_name}")
