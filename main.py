@@ -101,7 +101,10 @@ def update_playlist(sp, playlist_id, episode_ids):
         print(f"⚠️ Error al actualizar la playlist: {e}")
 
 def main():
-    
+
+    # Remove the cron.log file
+    open('/mnt/sda1/Repos/spotify-latest-episodes/cron.log', 'w').close()
+
     # Cargar los valores
     config = load_config()
 
