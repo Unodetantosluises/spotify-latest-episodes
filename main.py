@@ -10,7 +10,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='dac2ac9ea1644b4db3e6cd
 
 # Cargar configuración desde el archivo JSON
 def load_config():
-    with open('config.json', 'r') as config_file:
+    with open('/mnt/sda1/Repos/spotify-latest-episodes/config.json', 'r') as config_file:
         config = json.load(config_file)
     return config
 
