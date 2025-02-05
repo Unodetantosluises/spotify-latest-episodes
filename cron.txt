@@ -1,0 +1,4 @@
+visualize: crontab -l
+edit: crontab -e
+code inside the crontab:
+40 7 * * * cd /mnt/sda1/Repos/spotify-latest-episodes/ && ./venv/bin/python ./main.py >> ./cron.log 2>&1
