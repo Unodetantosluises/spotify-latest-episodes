@@ -24,10 +24,17 @@ def get_recent_episodes_from_podcast(sp, podcast_id):
         # Obtenemos los episodios más recientes del podcast (primero con limit=1)
         episodes = sp.show_episodes(podcast_id, limit=1, market="ES")
         
-        # Si no hay episodios, probamos con limit=2
+        # Si no hay episodios, probamos con limit=2 => Esta no te la sabes
+        # Esto es porque tendrán episodios nuevos subidos pero no públicos todavía
         if not episodes or 'items' not in episodes or episodes['items'][0] is None:
             print(f"⚠️ No se encontró un episodio válido con limit=1. Intentando con limit=2...")
             episodes = sp.show_episodes(podcast_id, limit=2, market="ES")
+        
+        # Si aún no hay episodios, probamos con limit=3 => No es el fin del mundo
+        # Esto es porque tendrán episodios nuevos subidos pero no públicos todavía
+        if not episodes or 'items' not in episodes or episodes['items'][0] is None:
+            print(f"⚠️ No se encontró un episodio válido con limit=2. Intentando con limit=3...")
+            episodes = sp.show_episodes(podcast_id, limit=3, market="ES")
         
         if not episodes or 'items' not in episodes or not any(episodes['items']):
             print(f"⚠️ No se encontraron episodios para el podcast {podcast_name}.")
@@ -109,8 +116,8 @@ def main():
     config = load_config()
 
     # Extraer los valores de la configuración
-    PODCAST_IDS = config['podcast_ids']
-    PLAYLIST_ID = config['playlist_id']
+    PLAYLIST_ID = config['playlist']['id']
+    PODCAST_IDS = [podcast['id'] for podcast in config['podcasts']]
 
     # Ahora puedes usar PODCAST_IDS y PLAYLIST_ID en tu código
     print("Podcast IDs:", PODCAST_IDS)

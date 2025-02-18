@@ -1,13 +1,57 @@
 {
-    "podcast_ids": [
-        "2pXBpdfJoAo2iNz5G25nCP",
-        "4EwwdoHHYmbt49UXODQMpi",
-        "4n2SYRzAXUKDFccZ993ZEh",
-        "6z2cewLloFTYiBrY84rM7z",
-        "0FTwiCMKTwCTmySy4u2X3j",
-        "12CqPzHZXXX0nrkuwX9dNE",
-        "42fDhii4v5RYuHTgy00un2",
-        "7h45VNT5C5NdbgqEegq5YI"
-    ],
-    "playlist_id": "2C9mOayNI4OD4i2DamNsbm"
+    "playlist": {
+        "id": "2C9mOayNI4OD4i2DamNsbm",
+        "name": "Noticias del día"
+    },
+    "podcasts": [
+        {
+            "id": "2pXBpdfJoAo2iNz5G25nCP",
+            "name": "AM"
+        },
+        {
+            "id": "4EwwdoHHYmbt49UXODQMpi",
+            "name": "Las noticias de la SER"
+        },
+        {
+            "id": "4n2SYRzAXUKDFccZ993ZEh",
+            "name": "Hoy en EL PAÍS"
+        },
+        {
+            "id": "6z2cewLloFTYiBrY84rM7z",
+            "name": "EL MUNDO al día"
+        },
+        {
+            "id": "12CqPzHZXXX0nrkuwX9dNE",
+            "name": "DESPIERTA TU CURIOSIDAD"
+        },
+        {
+            "id": "42fDhii4v5RYuHTgy00un2",
+            "name": "Hoy en la historia"
+        },
+        {
+            "id": "54Vnd9qwrTaINwzCkTTIWO",
+            "name": "Un tema Al Día"
+        },
+        {
+            "id": "0cLJl7pvrr1bkUaKiVRggf",
+            "name": "Las Noticias de ABC"
+        },
+        {
+            "id": "0FTwiCMKTwCTmySy4u2X3j",
+            "name": "La Primera de Expansión"
+        },
+        {
+            "id": "5dbvpKwtqz3X3hcX1BSEzf",
+            "name": "No es el fin del mundo"
+        },
+        {
+            "id": "1OZb8uCoiy9vG5mIyL9ytg",
+            "name": "Clave Barroso"
+        },
+        {
+            "id": "7h45VNT5C5NdbgqEegq5YI",
+            "name": "Esta no te la sabes"
+        }
+    ]
 }
+
