@@ -1,4 +1,4 @@
 visualize: crontab -l
 edit: crontab -e
 code inside the crontab:
-*/30 7-9 * * * cd /mnt/sda1/Repos/spotify-latest-episodes/ && ./venv/bin/python ./main.py >> ./cron.log 2>&1
+*/30 7-9 * * * cd /mnt/sda1/Repos/spotify-latest-episodes/ && python ./main.py >> ./cron.log 2>&1
