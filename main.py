@@ -3,9 +3,9 @@ from spotipy.oauth2 import SpotifyOAuth
 import json
 
 # Set up Spotify API credentials and authenticate
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='dac2ac9ea1644b4db3e6cd947c5e7d6d',
-                                               client_secret='861f16860471493085fcaf450e455243',
-                                               redirect_uri='http://127.0.0.1:8080/callback',
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='SPOTIPY_CLIENT_ID',
+                                               client_secret='SPOTIPY_CLIENT_SECRET',
+                                               redirect_uri='SPOTIPY_REDIRECT_URI',
                                                scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private', 'user-read-playback-position']))
 
 # Cargar configuración desde el archivo JSON
