@@ -5,4 +5,9 @@ edit:
 crontab -e
 
 code inside the crontab:
-*/30 7-9 * * * cd /home/debi/jaime/repos/spotify-latest-episodes/ && .venv/bin/python ./main.py >> ./cron.log 2>&1
+*/20 6-10 * * * docker run --rm \
+--env-file /home/debi/jaime/repos/spotify-latest-episodes/.env \
+--mount type=bind,source=/home/debi/jaime/repos/spotify-latest-episodes,target=/app \
+-w /app \
+spotify-latest-episodes-devcontainer \
+python main.py >> /home/debi/jaime/repos/spotify-latest-episodes/cron.log 2>&1
