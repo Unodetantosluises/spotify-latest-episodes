@@ -1,11 +1,16 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import json
+import json, os
+
+# Get the credentials from environment variables
+client_id = os.getenv('SPOTIPY_CLIENT_ID')
+client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
+redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
 
 # Set up Spotify API credentials and authenticate
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='SPOTIPY_CLIENT_ID',
-                                               client_secret='SPOTIPY_CLIENT_SECRET',
-                                               redirect_uri='SPOTIPY_REDIRECT_URI',
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
+                                               client_secret=client_secret,
+                                               redirect_uri=redirect_uri,
                                                scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private', 'user-read-playback-position']))
 
 # Cargar configuración desde el archivo JSON
