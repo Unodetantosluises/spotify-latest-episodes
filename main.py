@@ -114,8 +114,8 @@ def update_playlist(sp, playlist_id, episode_ids):
 
 def main():
 
-    # Remove the cron.log file
-    open('./cron.log', 'w').close()
+    # Remove the status.log file
+    open('./status.log', 'w').close()
 
     # Cargar los valores
     config = load_config()
