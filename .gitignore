@@ -171,5 +171,5 @@ cython_debug/
 .pypirc
 
 # custom
-!cron.log
+!status.log
 .vscode/
