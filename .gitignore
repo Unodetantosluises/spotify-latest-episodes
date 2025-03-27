@@ -172,4 +172,5 @@ cython_debug/
 
 # custom
 !status.log
+.status_prev_sum
 .vscode/
