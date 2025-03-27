@@ -17,6 +17,13 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
 def load_config():
     with open('./config.json', 'r') as config_file:
         config = json.load(config_file)
+
+    # Filtrar y ordenar los podcasts
+    config["podcasts"] = sorted(
+        [pod for pod in config["podcasts"] if not pod.get("ignore", False)],
+        key=lambda x: x["order"]
+    )
+
     return config
 
 def get_recent_episodes_from_podcast(sp, podcast_id):

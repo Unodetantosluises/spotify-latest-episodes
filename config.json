@@ -5,53 +5,65 @@
     },
     "podcasts": [
         {
-            "id": "2pXBpdfJoAo2iNz5G25nCP",
-            "name": "AM"
+            "id": "4EwwdoHHYmbt49UXODQMpi",
+            "name": "Las noticias de la SER",
+            "order": 1
         },
         {
-            "id": "4EwwdoHHYmbt49UXODQMpi",
-            "name": "Las noticias de la SER"
+            "id": "2pXBpdfJoAo2iNz5G25nCP",
+            "name": "AM",
+            "order": 2
         },
         {
             "id": "4n2SYRzAXUKDFccZ993ZEh",
-            "name": "Hoy en EL PAÍS"
+            "name": "Hoy en EL PAÍS",
+            "order": 3
         },
         {
             "id": "6z2cewLloFTYiBrY84rM7z",
-            "name": "EL MUNDO al día"
+            "name": "EL MUNDO al día",
+            "order": 4
         },
         {
             "id": "12CqPzHZXXX0nrkuwX9dNE",
-            "name": "DESPIERTA TU CURIOSIDAD"
+            "name": "DESPIERTA TU CURIOSIDAD",
+            "order": 5
         },
         {
             "id": "42fDhii4v5RYuHTgy00un2",
-            "name": "Hoy en la historia"
+            "name": "Hoy en la historia",
+            "order": 6
         },
         {
             "id": "54Vnd9qwrTaINwzCkTTIWO",
-            "name": "Un tema Al Día"
+            "name": "Un tema Al Día",
+            "order": 7
         },
         {
             "id": "0cLJl7pvrr1bkUaKiVRggf",
-            "name": "Las Noticias de ABC"
+            "name": "Las Noticias de ABC",
+            "order": 8
         },
         {
             "id": "0FTwiCMKTwCTmySy4u2X3j",
-            "name": "La Primera de Expansión"
+            "name": "La Primera de Expansión",
+            "order": 9
         },
         {
             "id": "5dbvpKwtqz3X3hcX1BSEzf",
-            "name": "No es el fin del mundo"
+            "name": "No es el fin del mundo",
+            "order": 10
         },
         {
             "id": "1OZb8uCoiy9vG5mIyL9ytg",
-            "name": "Clave Barroso"
+            "name": "Clave Barroso",
+            "order": 11
         },
         {
             "id": "7h45VNT5C5NdbgqEegq5YI",
-            "name": "Esta no te la sabes"
+            "name": "Esta no te la sabes",
+            "order": 12,
+            "ignore": true
         }
     ]
 }
-
