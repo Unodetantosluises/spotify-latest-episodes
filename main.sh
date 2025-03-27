@@ -11,7 +11,7 @@ docker run --rm \
   --env-file /home/debi/jaime/repos/spotify-latest-episodes/.env \
   --mount type=bind,source=/home/debi/jaime/repos/spotify-latest-episodes,target=/app \
   -w /app \
-  spotify-latest-episodes \
+  jaimebarran/spotify-latest-episodes:latest \
   python main.py >> "$LOG_FILE" 2>&1
 
 # Check if the log file has changed
