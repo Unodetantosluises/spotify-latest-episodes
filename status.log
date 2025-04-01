@@ -2,7 +2,7 @@ Podcast IDs: ['4EwwdoHHYmbt49UXODQMpi', '2pXBpdfJoAo2iNz5G25nCP', '4n2SYRzAXUKDF
 Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 06:00 (01/04/2025)
 🎧 Podcast: AM | Episodio más reciente: 'La mina' AM 1 abril 7:30am
-🎧 Podcast: Hoy en EL PAÍS | Episodio más reciente: Rodalies: más de una década llegando tarde a todos los sitios
+⚠️ Error inesperado: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
 🎧 Podcast: EL MUNDO al día | Episodio más reciente: Terremoto en Tailandia y Birmania: muerte, caos y guerra civil
 🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: ‘El Diablo Negro’, el arma de Hitler en el cielo
 🎧 Podcast: Hoy en la historia | Episodio más reciente: Se funda Apple - Hoy en 1976
@@ -13,4 +13,4 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Clave Barroso | Episodio más reciente: Feijóo Cumple 3 Años sin Casado y Sexta Manifestación Contra Mazón | Clave Barroso #130
 🚫 Eliminando episodios anteriores de la playlist...
 🔄 Añadiendo episodios a la playlist...
-✅ Respuesta del API: {'snapshot_id': 'AAABgMD4WWKT0nmC28YD+50sJTE1Mfmr'}
+✅ Respuesta del API: {'snapshot_id': 'AAABgc962SxRH101a4x43F4Pm42thhbs'}
