@@ -1,9 +1,3 @@
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
 Podcast IDs: ['4EwwdoHHYmbt49UXODQMpi', '2pXBpdfJoAo2iNz5G25nCP', '4n2SYRzAXUKDFccZ993ZEh', '6z2cewLloFTYiBrY84rM7z', '12CqPzHZXXX0nrkuwX9dNE', '42fDhii4v5RYuHTgy00un2', '54Vnd9qwrTaINwzCkTTIWO', '0cLJl7pvrr1bkUaKiVRggf', '0FTwiCMKTwCTmySy4u2X3j', '5dbvpKwtqz3X3hcX1BSEzf', '1OZb8uCoiy9vG5mIyL9ytg']
 Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 05:00 (01/04/2025)
@@ -11,15 +5,12 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Hoy en EL PAÍS | Episodio más reciente: Rodalies: más de una década llegando tarde a todos los sitios
 🎧 Podcast: EL MUNDO al día | Episodio más reciente: Terremoto en Tailandia y Birmania: muerte, caos y guerra civil
 🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: ‘El Diablo Negro’, el arma de Hitler en el cielo
-🎧 Podcast: Hoy en la historia | Episodio más reciente: Los Reyes Católicos expulsan a los judíos de España - Hoy en 1492
-🎧 Podcast: Un tema Al Día | Episodio más reciente: Una transición en familia 
-🎧 Podcast: Las Noticias de ABC | Episodio más reciente: Los líderes del 1-O no se jubilan, CC.OO. y UGT usan gratis 58 edificios cedidos por el Estado, y la encrucijada de los menores marroquíes
+🎧 Podcast: Hoy en la historia | Episodio más reciente: Se funda Apple - Hoy en 1976
+🎧 Podcast: Un tema Al Día | Episodio más reciente: Dani Alves: un caso, dos sentencias
+🎧 Podcast: Las Noticias de ABC | Episodio más reciente: Una explosión en la mina de Cerredo, Pedro Sánchez y las universidades privadas, y Víctor de Aldama
 🎧 Podcast: La Primera de Expansión | Episodio más reciente: Santander, McKinsey, aranceles, China, Trump, Defensa y Alemani
 🎧 Podcast: No es el fin del mundo | Episodio más reciente: 185. Directo ICEX: 50 años de la internacionalización de España
 🎧 Podcast: Clave Barroso | Episodio más reciente: Feijóo Cumple 3 Años sin Casado y Sexta Manifestación Contra Mazón | Clave Barroso #130
-⚠️ Error al obtener episodios de la playlist: http status: 429, code: -1 - /v1/playlists/2C9mOayNI4OD4i2DamNsbm/tracks?limit=100&offset=0&additional_types=track:
- Max Retries, reason: too many 502 error responses
 🚫 Eliminando episodios anteriores de la playlist...
-❌ No se encontraron episodios previos para eliminar.
 🔄 Añadiendo episodios a la playlist...
-✅ Respuesta del API: {'snapshot_id': 'AAABffszYMrYYNQphCMpQ3Tf9UrF+F9G'}
+✅ Respuesta del API: {'snapshot_id': 'AAABfkTu49Zua7DmIpuCZmEoMHok1mw9'}
