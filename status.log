@@ -7,10 +7,10 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: Hitler y los tres científicos a los que obligó a rechazar el Premio Nobel
 🎧 Podcast: Hoy en la historia | Episodio más reciente: Comienza la guerra civil del Líbano -Hoy en 1975
 🎧 Podcast: Un tema Al Día | Episodio más reciente: Explotación dorada: la vida trabajando para ricos 
-🎧 Podcast: Las Noticias de ABC | Episodio más reciente: El informe a la UCO sobre Begoña Gómez que rechaza el fiscal del caso, el conflicto en Gibraltar, y la entrada de Machado en la RAE
+⚠️ Error inesperado: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
 🎧 Podcast: La Primera de Expansión | Episodio más reciente: Bolsas, Goldman Sachs, Repsol, Iberdrola, Telefónica, Xi Jinping y Von der Leyen
 🎧 Podcast: No es el fin del mundo | Episodio más reciente: 188. El regreso geopolítico del Reino Unido
 🎧 Podcast: Clave Barroso | Episodio más reciente: El Gran Problema de Ayuso y el Fracaso de Trump con China | Clave Barroso #139
 🚫 Eliminando episodios anteriores de la playlist...
 🔄 Añadiendo episodios a la playlist...
-✅ Respuesta del API: {'snapshot_id': 'AAAB30mdxmGg5anIscPB7vQDxP9u4SoD'}
+⚠️ Error al actualizar la playlist: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
