@@ -10,7 +10,7 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Las Noticias de ABC | Episodio más reciente: Las voces del apagón: relatos de una crisis eléctrica
 🎧 Podcast: La Primera de Expansión | Episodio más reciente: Astara, BBVA, Iberdrola, Naturgy, China, Canadá y Apple
 🎧 Podcast: No es el fin del mundo | Episodio más reciente: 191. La geopolítica del libro
-🎧 Podcast: Clave Barroso | Episodio más reciente: Ayuso Colapsa en un Mitin, Atentado al PSOE y 100 Días de Trump | Clave Barroso #148
+⚠️ Error inesperado: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
 🚫 Eliminando episodios anteriores de la playlist...
 🔄 Añadiendo episodios a la playlist...
-✅ Respuesta del API: {'snapshot_id': 'AAACYtZWJsXIsgoVjAv074/7lB2EPwfC'}
+✅ Respuesta del API: {'snapshot_id': 'AAACY8uZZQqxEmev6iUgugrAXWHGv6oA'}
