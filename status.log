@@ -1,80 +1,18 @@
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
 Podcast IDs: ['4EwwdoHHYmbt49UXODQMpi', '2pXBpdfJoAo2iNz5G25nCP', '4n2SYRzAXUKDFccZ993ZEh', '6z2cewLloFTYiBrY84rM7z', '12CqPzHZXXX0nrkuwX9dNE', '42fDhii4v5RYuHTgy00un2', '54Vnd9qwrTaINwzCkTTIWO', '0cLJl7pvrr1bkUaKiVRggf', '0FTwiCMKTwCTmySy4u2X3j', '5dbvpKwtqz3X3hcX1BSEzf', '1OZb8uCoiy9vG5mIyL9ytg']
 Playlist ID: 2C9mOayNI4OD4i2DamNsbm
-⚠️ Error al obtener episodios del podcast 4EwwdoHHYmbt49UXODQMpi: http status: 429, code: -1 - /v1/shows/4EwwdoHHYmbt49UXODQMpi:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 2pXBpdfJoAo2iNz5G25nCP: http status: 429, code: -1 - /v1/shows/2pXBpdfJoAo2iNz5G25nCP:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 4n2SYRzAXUKDFccZ993ZEh: http status: 429, code: -1 - /v1/shows/4n2SYRzAXUKDFccZ993ZEh:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 6z2cewLloFTYiBrY84rM7z: http status: 429, code: -1 - /v1/shows/6z2cewLloFTYiBrY84rM7z:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 12CqPzHZXXX0nrkuwX9dNE: http status: 429, code: -1 - /v1/shows/12CqPzHZXXX0nrkuwX9dNE:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 42fDhii4v5RYuHTgy00un2: http status: 429, code: -1 - /v1/shows/42fDhii4v5RYuHTgy00un2:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 54Vnd9qwrTaINwzCkTTIWO: http status: 429, code: -1 - /v1/shows/54Vnd9qwrTaINwzCkTTIWO:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 0cLJl7pvrr1bkUaKiVRggf: http status: 429, code: -1 - /v1/shows/0cLJl7pvrr1bkUaKiVRggf:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 0FTwiCMKTwCTmySy4u2X3j: http status: 429, code: -1 - /v1/shows/0FTwiCMKTwCTmySy4u2X3j:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 5dbvpKwtqz3X3hcX1BSEzf: http status: 429, code: -1 - /v1/shows/5dbvpKwtqz3X3hcX1BSEzf:
- Max Retries, reason: too many 502 error responses
-⚠️ Error al obtener episodios del podcast 1OZb8uCoiy9vG5mIyL9ytg: http status: 429, code: -1 - /v1/shows/1OZb8uCoiy9vG5mIyL9ytg:
- Max Retries, reason: too many 502 error responses
-⚠️ No se obtuvieron episodios para actualizar la playlist.
+🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 05:00 (01/07/2025)
+🎧 Podcast: AM | Episodio más reciente: 'Otro día en el juzgado' AM 30 junio 7:30am
+🎧 Podcast: Hoy en EL PAÍS | Episodio más reciente: Identidad en crisis: cómo ser judío mientras Israel destruye Gaza
+🎧 Podcast: EL MUNDO al día | Episodio más reciente: Santos Cerdán: cárcel para el "arquitecto" del Gobierno de Sánchez
+🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: La Batalla de Numancia: una resistencia que llegó hasta su final
+🎧 Podcast: Hoy en la historia | Episodio más reciente: Hitler desata la noche de los cuchillos largos - Hoy en 1934
+🎧 Podcast: Un tema Al Día | Episodio más reciente: Expediente Arkema: el veneno eterno de la industria química
+🎧 Podcast: Las Noticias de ABC | Episodio más reciente: El Gobierno se aferra a los presupuestos y a las exigencias de sus socios
+🎧 Podcast: La Primera de Expansión | Episodio más reciente: Entrevista con Beatriz Corredor (Redeia), registro turístico, Sucesiones, BBVA y Sabadell
+⚠️ No se encontró un episodio válido con limit=1. Intentando con limit=2...
+⚠️ No se encontró un episodio válido con limit=2. Intentando con limit=3...
+🎧 Podcast: No es el fin del mundo | Episodio más reciente: 204. Apocalipsis y distopía a través del videojuego
+🎧 Podcast: Clave Barroso | Episodio más reciente: La Derecha Rabia con el Orgullo, Almeida Fracasado y Declara Cerdán | Clave Barroso #171
+🚫 Eliminando episodios anteriores de la playlist...
+🔄 Añadiendo episodios a la playlist...
+✅ Respuesta del API: {'snapshot_id': 'AAAEk5Dkbv7Qmu+yj6+zLpYCxeaEunKt'}
