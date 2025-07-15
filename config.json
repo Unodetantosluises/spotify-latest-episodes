@@ -60,9 +60,14 @@
             "order": 11
         },
         {
+            "id": "47cbCjksqpZfbMqc9HrI0p",
+            "name": "Noticias paralelas",
+            "order": 12
+        },
+        {
             "id": "7h45VNT5C5NdbgqEegq5YI",
             "name": "Esta no te la sabes",
-            "order": 12,
+            "order": 13,
             "ignore": true
         }
     ]
