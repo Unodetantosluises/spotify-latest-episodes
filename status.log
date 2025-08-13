@@ -5,7 +5,7 @@ WARNING:root:Your application has reached a rate/request limit. Retry will occur
 ERROR:spotipy.client:Max Retries reached
 Podcast IDs: ['4EwwdoHHYmbt49UXODQMpi', '2pXBpdfJoAo2iNz5G25nCP', '4n2SYRzAXUKDFccZ993ZEh', '6z2cewLloFTYiBrY84rM7z', '12CqPzHZXXX0nrkuwX9dNE', '42fDhii4v5RYuHTgy00un2', '54Vnd9qwrTaINwzCkTTIWO', '0cLJl7pvrr1bkUaKiVRggf', '0FTwiCMKTwCTmySy4u2X3j', '5dbvpKwtqz3X3hcX1BSEzf', '1OZb8uCoiy9vG5mIyL9ytg', '47cbCjksqpZfbMqc9HrI0p']
 Playlist ID: 2C9mOayNI4OD4i2DamNsbm
-🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 08:00 (13/08/2025)
+🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 10:00 (13/08/2025)
 🎧 Podcast: AM | Episodio más reciente: 'El último de la temporada' AM 31 julio 7:30am
 🎧 Podcast: Hoy en EL PAÍS | Episodio más reciente: Lo mejor de 'Hoy en EL PAÍS' | ¿Qué lleva a alguien a usar ChatGPT como psicólogo?
 🎧 Podcast: EL MUNDO al día | Episodio más reciente: Por qué la obesidad no es lo que crees | Lo mejor de 'El Mundo al día'
@@ -17,9 +17,6 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: No es el fin del mundo | Episodio más reciente: 212. El tatuaje, una historia a través de la piel
 🎧 Podcast: Clave Barroso | Episodio más reciente: Feijóo Confirma Que Pactará Con Vox, Ayuso se Hace la Loca y Sánchez Resiste | Clave Barroso #173
 🎧 Podcast: Noticias Paralelas | Episodio más reciente: 'Torta mexicana': un platillo delicioso | Noticias Paralelas
-⚠️ Error inesperado al obtener episodios de la playlist: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
 🚫 Eliminando episodios anteriores de la playlist...
-❌ No se encontraron episodios previos para eliminar.
-🔄 Añadiendo episodios a la playlist...
 ⚠️ Error al actualizar la playlist: http status: 429, code: -1 - /v1/playlists/2C9mOayNI4OD4i2DamNsbm/tracks:
  Max Retries, reason: too many 500 error responses
