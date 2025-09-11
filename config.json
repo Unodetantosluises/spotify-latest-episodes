@@ -25,43 +25,43 @@
             "order": 4
         },
         {
+            "id": "54Vnd9qwrTaINwzCkTTIWO",
+            "name": "Un tema Al Día",
+            "order": 5
+        },
+        {
             "id": "12CqPzHZXXX0nrkuwX9dNE",
             "name": "DESPIERTA TU CURIOSIDAD",
-            "order": 5
+            "order": 6
         },
         {
             "id": "42fDhii4v5RYuHTgy00un2",
             "name": "Hoy en la historia",
-            "order": 6
-        },
-        {
-            "id": "54Vnd9qwrTaINwzCkTTIWO",
-            "name": "Un tema Al Día",
             "order": 7
-        },
-        {
-            "id": "0cLJl7pvrr1bkUaKiVRggf",
-            "name": "Las Noticias de ABC",
-            "order": 8
-        },
-        {
-            "id": "0FTwiCMKTwCTmySy4u2X3j",
-            "name": "La Primera de Expansión",
-            "order": 9
-        },
-        {
-            "id": "5dbvpKwtqz3X3hcX1BSEzf",
-            "name": "No es el fin del mundo",
-            "order": 10
-        },
-        {
-            "id": "1OZb8uCoiy9vG5mIyL9ytg",
-            "name": "Clave Barroso",
-            "order": 11
         },
         {
             "id": "47cbCjksqpZfbMqc9HrI0p",
             "name": "Noticias paralelas",
+            "order": 8
+        },
+        {
+            "id": "0cLJl7pvrr1bkUaKiVRggf",
+            "name": "Las Noticias de ABC",
+            "order": 9
+        },
+        {
+            "id": "0FTwiCMKTwCTmySy4u2X3j",
+            "name": "La Primera de Expansión",
+            "order": 10
+        },
+        {
+            "id": "5dbvpKwtqz3X3hcX1BSEzf",
+            "name": "No es el fin del mundo",
+            "order": 11
+        },
+        {
+            "id": "1OZb8uCoiy9vG5mIyL9ytg",
+            "name": "Clave Barroso",
             "order": 12
         },
         {
