@@ -36,3 +36,6 @@ Run 'docker run --help' for more information
 docker: Cannot connect to the Docker daemon at unix:///home/debi/.docker/desktop/docker.sock. Is the docker daemon running?
 
 Run 'docker run --help' for more information
+docker: Cannot connect to the Docker daemon at unix:///home/debi/.docker/desktop/docker.sock. Is the docker daemon running?
+
+Run 'docker run --help' for more information
