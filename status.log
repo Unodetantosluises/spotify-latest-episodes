@@ -15,3 +15,15 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🚫 Eliminando episodios anteriores de la playlist...
 🔄 Añadiendo episodios a la playlist...
 ✅ Respuesta del API: {'snapshot_id': 'AAAHbAkzhei7yEg7Fko5pIpKNEX89YA3'}
+docker: error during connect: Head "http://%2Fhome%2Fdebi%2F.docker%2Fdesktop%2Fdocker.sock/_ping": EOF
+
+Run 'docker run --help' for more information
+docker: error during connect: Head "http://%2Fhome%2Fdebi%2F.docker%2Fdesktop%2Fdocker.sock/_ping": EOF
+
+Run 'docker run --help' for more information
+docker: error during connect: Head "http://%2Fhome%2Fdebi%2F.docker%2Fdesktop%2Fdocker.sock/_ping": EOF
+
+Run 'docker run --help' for more information
+docker: Cannot connect to the Docker daemon at unix:///home/debi/.docker/desktop/docker.sock. Is the docker daemon running?
+
+Run 'docker run --help' for more information
