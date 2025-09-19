@@ -22,11 +22,8 @@ def load_config():
     with open('./config.json', 'r') as config_file:
         config = json.load(config_file)
 
-    # Filtrar y ordenar los podcasts
-    config["podcasts"] = sorted(
-        [pod for pod in config["podcasts"] if not pod.get("ignore", False)],
-        key=lambda x: x["order"]
-    )
+    # Filtrar los podcasts (mantener el orden original del archivo)
+    config["podcasts"] = [pod for pod in config["podcasts"] if not pod.get("ignore", False)]
 
     return config
 

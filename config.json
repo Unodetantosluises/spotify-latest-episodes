@@ -6,68 +6,57 @@
     "podcasts": [
         {
             "id": "4EwwdoHHYmbt49UXODQMpi",
-            "name": "Las noticias de la SER",
-            "order": 1
+            "name": "Las noticias de la SER"
         },
         {
             "id": "2pXBpdfJoAo2iNz5G25nCP",
-            "name": "AM",
-            "order": 2
+            "name": "AM"
         },
         {
             "id": "4n2SYRzAXUKDFccZ993ZEh",
-            "name": "Hoy en EL PAÍS",
-            "order": 3
+            "name": "Hoy en EL PAÍS"
         },
         {
             "id": "6z2cewLloFTYiBrY84rM7z",
-            "name": "EL MUNDO al día",
-            "order": 4
+            "name": "EL MUNDO al día"
         },
         {
             "id": "54Vnd9qwrTaINwzCkTTIWO",
-            "name": "Un tema Al Día",
-            "order": 5
+            "name": "Un tema Al Día"
         },
         {
             "id": "12CqPzHZXXX0nrkuwX9dNE",
-            "name": "DESPIERTA TU CURIOSIDAD",
-            "order": 6
+            "name": "DESPIERTA TU CURIOSIDAD"
         },
         {
             "id": "42fDhii4v5RYuHTgy00un2",
             "name": "Hoy en la historia",
-            "order": 7
-        },
-        {
-            "id": "47cbCjksqpZfbMqc9HrI0p",
-            "name": "Noticias paralelas",
-            "order": 8
-        },
-        {
-            "id": "0cLJl7pvrr1bkUaKiVRggf",
-            "name": "Las Noticias de ABC",
-            "order": 9
-        },
-        {
-            "id": "0FTwiCMKTwCTmySy4u2X3j",
-            "name": "La Primera de Expansión",
-            "order": 10
+            "ignore": true
         },
         {
             "id": "5dbvpKwtqz3X3hcX1BSEzf",
-            "name": "No es el fin del mundo",
-            "order": 11
+            "name": "No es el fin del mundo"
+        },
+        {
+            "id": "47cbCjksqpZfbMqc9HrI0p",
+            "name": "Noticias paralelas"
+        },
+        {
+            "id": "0cLJl7pvrr1bkUaKiVRggf",
+            "name": "Las Noticias de ABC"
+        },
+        {
+            "id": "0FTwiCMKTwCTmySy4u2X3j",
+            "name": "La Primera de Expansión"
         },
         {
             "id": "1OZb8uCoiy9vG5mIyL9ytg",
             "name": "Clave Barroso",
-            "order": 12
+            "ignore": true
         },
         {
             "id": "7h45VNT5C5NdbgqEegq5YI",
             "name": "Esta no te la sabes",
-            "order": 13,
             "ignore": true
         }
     ]
