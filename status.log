@@ -1,3 +1,11 @@
 docker: Cannot connect to the Docker daemon at unix:///home/debi/.docker/desktop/docker.sock. Is the docker daemon running?
 
 Run 'docker run --help' for more information
+Traceback (most recent call last):
+  File "/app/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+Traceback (most recent call last):
+  File "/app/main.py", line 4, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
