@@ -1,6 +1,10 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import json, os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Get the credentials from environment variables
 client_id = os.getenv('SPOTIPY_CLIENT_ID')
