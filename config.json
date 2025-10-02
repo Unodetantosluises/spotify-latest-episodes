@@ -25,29 +25,29 @@
             "name": "Un tema Al Día"
         },
         {
+            "id": "0cLJl7pvrr1bkUaKiVRggf",
+            "name": "Las Noticias de ABC"
+        },
+        {
             "id": "12CqPzHZXXX0nrkuwX9dNE",
             "name": "DESPIERTA TU CURIOSIDAD"
-        },
-        {
-            "id": "42fDhii4v5RYuHTgy00un2",
-            "name": "Hoy en la historia",
-            "ignore": true
-        },
-        {
-            "id": "5dbvpKwtqz3X3hcX1BSEzf",
-            "name": "No es el fin del mundo"
         },
         {
             "id": "47cbCjksqpZfbMqc9HrI0p",
             "name": "Noticias paralelas"
         },
         {
-            "id": "0cLJl7pvrr1bkUaKiVRggf",
-            "name": "Las Noticias de ABC"
-        },
-        {
             "id": "0FTwiCMKTwCTmySy4u2X3j",
             "name": "La Primera de Expansión"
+        },
+        {
+            "id": "5dbvpKwtqz3X3hcX1BSEzf",
+            "name": "No es el fin del mundo"
+        },
+        {
+            "id": "42fDhii4v5RYuHTgy00un2",
+            "name": "Hoy en la historia",
+            "ignore": true
         },
         {
             "id": "1OZb8uCoiy9vG5mIyL9ytg",
