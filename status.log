@@ -1,29 +1,15 @@
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-WARNING:root:Your application has reached a rate/request limit. Retry will occur after: None
-ERROR:spotipy.client:Max Retries reached
 Podcast IDs: ['4EwwdoHHYmbt49UXODQMpi', '2pXBpdfJoAo2iNz5G25nCP', '4n2SYRzAXUKDFccZ993ZEh', '6z2cewLloFTYiBrY84rM7z', '54Vnd9qwrTaINwzCkTTIWO', '0cLJl7pvrr1bkUaKiVRggf', '12CqPzHZXXX0nrkuwX9dNE', '47cbCjksqpZfbMqc9HrI0p', '0FTwiCMKTwCTmySy4u2X3j', '5dbvpKwtqz3X3hcX1BSEzf']
 Playlist ID: 2C9mOayNI4OD4i2DamNsbm
-🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 10:00 (06/10/2025)
+🎧 Podcast: Las noticias de la SER | Episodio más reciente: Las noticias de la SER, 05:00 (07/10/2025)
 🎧 Podcast: AM | Episodio más reciente: 'Primer grupo' AM 6 octubre 7:30am
 🎧 Podcast: Hoy en EL PAÍS | Episodio más reciente: Envejecer, la última barrera que quieren derribar Putin y Silicon Valley
-🎧 Podcast: EL MUNDO al día | Episodio más reciente: ¿Por qué hay tan pocos premios Nobel españoles?
+🎧 Podcast: EL MUNDO al día | Episodio más reciente: Los sobres del PSOE y la sombra de la financiación ilegal
 🎧 Podcast: Un tema Al Día | Episodio más reciente: Los niños de Internet han crecido: “¿Por qué mis padres publicaban mis fotos en redes?”
-🎧 Podcast: Las Noticias de ABC | Episodio más reciente: El Ejecutivo estudia nuevas participaciones en empresas del Ibex tras el modelo de Telefónica
-🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: El mayor asesino en serie de España: ‘El Arropiero’
+🎧 Podcast: Las Noticias de ABC | Episodio más reciente: Koldo maniobra ante notario, mientras la UCO sigue con sus investigaciones
+🎧 Podcast: DESPIERTA TU CURIOSIDAD | Episodio más reciente: Alfred Wegener, el meteorólogo que demostró que los continentes se desplazan
 🎧 Podcast: Noticias Paralelas | Episodio más reciente: Adictos a la IA: una conducta peligrosa | Noticias Paralelas
 🎧 Podcast: La Primera de Expansión | Episodio más reciente: ERE en Telefónica, Ignacio Juliá, Sabadell, Clevergy, el Nikkei y el rally del oro
 🎧 Podcast: No es el fin del mundo | Episodio más reciente: 224. La geopolítica de los museos
-⚠️ Error al obtener episodios de la playlist: http status: 429, code: -1 - /v1/playlists/2C9mOayNI4OD4i2DamNsbm/tracks?limit=100&offset=0&additional_types=track:
- Max Retries, reason: too many 502 error responses
 🚫 Eliminando episodios anteriores de la playlist...
-❌ No se encontraron episodios previos para eliminar.
 🔄 Añadiendo episodios a la playlist...
-⚠️ Error al actualizar la playlist: http status: 429, code: -1 - /v1/playlists/2C9mOayNI4OD4i2DamNsbm/tracks:
- Max Retries, reason: too many 502 error responses
+✅ Respuesta del API: {'snapshot_id': 'AAAH8wc3e9qc0TGdLa5IJN4/zedTbOqb'}
