@@ -21,4 +21,4 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-*/20 6-10 * * * /home/debi/jaime/repos/spotify-latest-episodes/main.sh
+*/20 6-11 * * * /home/debi/jaime/repos/spotify-latest-episodes/main.sh

@@ -137,6 +137,7 @@ def main():
     print("Playlist ID:", PLAYLIST_ID)
     
     # Obtenemos los episodios más recientes de cada podcast
+    # TODO: obtener un episodio en concreto por su nombre (e.g. "Las tres noticias de Carlos Alsina" de "Más de uno")
     episode_ids = []
     for podcast_id in PODCAST_IDS:
         recent_episodes = get_recent_episodes_from_podcast(sp, podcast_id)
