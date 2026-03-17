@@ -14,8 +14,6 @@ Playlist ID: 2C9mOayNI4OD4i2DamNsbm
 🎧 Podcast: Las Noticias de ABC | Episodio más reciente: El PSOE teme que la vinculación con Sánchez pueda ser un lastre en las campañas electorales autonómicas
 🎧 Podcast: La Primera de Expansión | Episodio más reciente: Repsol, Brookfield, defensa, Santander, Leapmotor y Nvidia
 🎧 Podcast: Clave Barroso | Episodio más reciente: ¡ADIÓS TECNO-OLIGARCAS! Sánchez responde a Musk y Telegram| Clave Barroso #197
-⚠️ Error inesperado al obtener episodios de la playlist: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=5)
 🚫 Eliminando episodios anteriores de la playlist...
-❌ No se encontraron episodios previos para eliminar.
 🔄 Añadiendo episodios a la playlist...
 ✅ Respuesta del API: {'snapshot_id': 'AAANaH9VPo4DHFSFq+GU9EYdUfJmjAj7'}
