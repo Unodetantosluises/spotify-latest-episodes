@@ -1,32 +1,32 @@
 {
     "playlist": {
-        "id": "2C9mOayNI4OD4i2DamNsbm",
-        "name": "Noticias del día"
+        "id": "12t38chkxXwhOqPXETnsCv",
+        "name": "Ruta Diaria"
     },
     "podcasts": [
         {
-            "id": "4EwwdoHHYmbt49UXODQMpi",
-            "name": "Las noticias de la SER"
+            "id": "0vDgnorbpBr65YZzFVVouE",
+            "name": "CNN 5 Cosas"
         },
         {
-            "id": "2pXBpdfJoAo2iNz5G25nCP",
-            "name": "AM"
+            "id": "0NXF3nHMLWO7qEdaUsp99b",
+            "name": "La Estrategia del Día México"
         },
         {
-            "id": "4n2SYRzAXUKDFccZ993ZEh",
-            "name": "Hoy en EL PAÍS"
+            "id": "5ZGlgp8Y6fpXNpg9drwBUs",
+            "name": "Primera Plana: Noticias"
         },
         {
-            "id": "6z2cewLloFTYiBrY84rM7z",
-            "name": "EL MUNDO al día"
+            "id": "4zJjzOg3ZMMxjLZqAmIh1F",
+            "name": "Expansión Daily: Lo que hay que saber"
         },
         {
-            "id": "54Vnd9qwrTaINwzCkTTIWO",
-            "name": "Un tema Al Día"
+            "id": "43rcJFrIwMyaiJO8VGH3pD",
+            "name": "N+ Diario"
         },
         {
-            "id": "6AgJw75jtnt2X5o7jxX7m0",
-            "name": "Flash Deportes SER"
+            "id": "4d5pKMELwNWiuNDYoXW0Dt",
+            "name": "Política y otros datos: La vida pública explicada"
         },
         {
             "id": "7h45VNT5C5NdbgqEegq5YI",
@@ -35,40 +35,6 @@
         {
             "id": "12CqPzHZXXX0nrkuwX9dNE",
             "name": "DESPIERTA TU CURIOSIDAD"
-        },
-        {
-            "id": "3iM6J3KDbrzqcuWfUw0LLk",
-            "name": "¿Qué pasa, Barroso?"
-        },
-        {
-            "id": "5dbvpKwtqz3X3hcX1BSEzf",
-            "name": "No es el fin del mundo"
-        },
-        {
-            "id": "47cbCjksqpZfbMqc9HrI0p",
-            "name": "Noticias paralelas"
-        },
-        {
-            "id": "0cLJl7pvrr1bkUaKiVRggf",
-            "name": "Las Noticias de ABC"
-        },
-        {
-            "id": "0FTwiCMKTwCTmySy4u2X3j",
-            "name": "La Primera de Expansión"
-        },
-        {
-            "id": "1OZb8uCoiy9vG5mIyL9ytg",
-            "name": "Clave Barroso"
-        },
-        {
-            "id": "2iKebgGPe7a1a13zUr0Q20",
-            "name": "Más de uno",
-            "ignore": true
-        },
-        {
-            "id": "42fDhii4v5RYuHTgy00un2",
-            "name": "Hoy en la historia",
-            "ignore": true
         }
     ]
 }

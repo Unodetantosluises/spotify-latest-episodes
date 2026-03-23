@@ -1,5 +1,5 @@
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
+from spotipy.oauth2 import SpotifyPKCE
 import json, os
 from dotenv import load_dotenv
 
@@ -12,14 +12,13 @@ client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
 redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
 
 # Set up Spotify API credentials and authenticate
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=client_id,
-                                               client_secret=client_secret,
-                                               redirect_uri=redirect_uri,
-                                               scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private', 'user-read-playback-position']))
+sp = spotipy.Spotify(auth_manager=SpotifyPKCE(client_id=client_id,
+                                              redirect_uri=redirect_uri,
+                                              scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private']))
 
 # Cargar configuración desde el archivo JSON
 def load_config():
-    with open('./config.json', 'r') as config_file:
+    with open('./config.json', 'r', encoding='utf-8') as config_file:
         config = json.load(config_file)
 
     # Filtrar los podcasts (mantener el orden original del archivo)
@@ -79,7 +78,7 @@ def get_playlist_episodes(sp, playlist_id):
     """Obtiene las URIs de los episodios actuales de la playlist."""
     try:
         # Obtenemos las pistas de la playlist
-        episodes = sp.playlist_tracks(playlist_id)
+        episodes = sp.playlist_items(playlist_id)
         # print(f"Respuesta de la API para la playlist {episodes}")
         
         if not episodes or 'items' not in episodes or not episodes['items']:
