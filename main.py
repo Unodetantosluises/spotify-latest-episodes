@@ -14,7 +14,7 @@ redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
 # Set up Spotify API credentials and authenticate
 sp = spotipy.Spotify(auth_manager=SpotifyPKCE(client_id=client_id,
                                               redirect_uri=redirect_uri,
-                                              scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private']))
+                                              scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private', 'user-top-read']))
 
 # Cargar configuración desde el archivo JSON
 def load_config():
@@ -101,6 +101,45 @@ def get_playlist_episodes(sp, playlist_id):
         return []
 
 
+def get_favorite_tracks(sp, total_needed):
+    """Obtiene las canciones más escuchadas del usuario en el corto plazo."""
+    try:
+        print(f"🎵 Buscando {total_needed} canciones favoritas...")
+        # time_range='short_term' trae lo que más has escuchado en las últimas 4 semanas
+        results = sp.current_user_top_tracks(limit=total_needed, time_range='short_term')
+
+        if not results or 'items' not in results:
+            print("⚠️ No se encontraron canciones favoritas.")
+            return []
+
+        track_uris = [track['uri'] for track in results['items']]
+        return track_uris
+
+    except Exception as e:
+        print(f"⚠️ Error al obtener tus canciones favoritas: {e}")
+        return []
+
+
+def build_ruta_diaria(episode_uris, track_uris, tracks_per_episode=5):
+    """Intercala episodios y canciones en un solo arreglo."""
+    ruta_diaria = []
+    track_index = 0
+    total_tracks = len(track_uris)
+
+    for episode in episode_uris:
+        # 1. Agregamos el episodio de noticias
+        ruta_diaria.append(episode)
+
+        # 2. Agregamos las 5 canciones siguientes
+        for _ in range(tracks_per_episode):
+            if track_index < total_tracks:
+                ruta_diaria.append(track_uris[track_index])
+                track_index += 1
+            else:
+                break  # Se nos acabaron las canciones disponibles
+
+    return ruta_diaria
+
 def update_playlist(sp, playlist_id, episode_ids):
     """Reemplaza los episodios en la playlist con los nuevos episodios."""
     try:
@@ -141,10 +180,19 @@ def main():
     for podcast_id in PODCAST_IDS:
         recent_episodes = get_recent_episodes_from_podcast(sp, podcast_id)
         episode_ids.extend(recent_episodes)
-        
-    # Actualizamos la playlist con los nuevos episodios
+
     if episode_ids:
-        update_playlist(sp, PLAYLIST_ID, episode_ids)
+        # Calculamos cuántas canciones necesitamos en total (5 por cada episodio encontrado)
+        canciones_necesarias = len(episode_ids) * 5
+
+        # Obtenemos ese número exacto de canciones favoritas
+        mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
+
+        # Armamos la lista final mezclada
+        lista_final = build_ruta_diaria(episode_ids, mis_canciones, tracks_per_episode=5)
+
+        # Actualizamos la playlist con el nuevo arreglo mixto
+        update_playlist(sp, PLAYLIST_ID, lista_final)
     else:
         print("⚠️ No se obtuvieron episodios para actualizar la playlist.")
 
