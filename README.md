@@ -22,9 +22,9 @@ Si has intentado usar scripts anmtiguos de Spotify y te has encontrado con el me
 - **Redireccion Estricta:** La API ya no perdona errores de sintaxis en el `Redirect URI`. Se requiere coincidencia absoluta(_sin slashes al final_).
 
 # Requisitos Tecnicos
-OPara correr este proyecto en tu maquina local, neceaitas:
-- **Python 3.10 o superior** instalado en tu sistema.
-- Una cuenta en **[Spotify for Developers](https://developer.spotify.com/)**(Es gretis con tu usuario normal de Spotify).
+Para correr este proyecto en tu maquina local, necesitas:
+- **Python 3.10 o superior** instalado en tu sistema(si es tu primera vez progamando, usando python o usando este tipo de herramientas basta con que instales **PyCharm**, el IDE se encargara de instalar Python por ti si no se encuentra en tu maquina).
+- Una cuenta en **[Spotify for Developers](https://developer.spotify.com/)**(Es gratis con tu usuario normal de Spotify, aunque necesitas ser usuario premium de spotify para poder hacer uso de la API).
 - Un **[IDE](https://www.jetbrains.com/pycharm/?_gl=1*1tjouby*_gcl_au*MTEzNjMwMzA3Ni4xNzcyMzI2MTU3LjE1MDUyNTY1MzcuMTc3MjMyNzg4My4xNzcyMzI4NTY1*FPAU*MTEzNjMwMzA3Ni4xNzcyMzI2MTU3*_ga*MzgwNDYxNjczLjE3NzIzMjYxNTc.*_ga_9J976DJZ68*czE3NzIzMjYxNTckbzEkZzEkdDE3NzIzMjk1MjUkajIzJGwwJGgw)** o **[Editor de Codigo](https://code.visualstudio.com/)** de tu preferencia, para ejecutar comandos basicos.
 - Opcional: **[Git](https://git-scm.com/)**.
 ___
@@ -42,6 +42,7 @@ cd mi-ruta-diaria
 pip install -r requirements.txt
 ```
 O puedes descargar directamente el proyecto en tu maquina.
+
 3. **Configura tus Variables de Entorno**
 Crea un archivo llamado `.env` en la raiz del proyecto con la siguiente estructura:
 ```

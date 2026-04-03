@@ -136,6 +136,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# File JSON
+mis_generos.json
+
 # Spyder project settings
 .spyderproject
 .spyproject

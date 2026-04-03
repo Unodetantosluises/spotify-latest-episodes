@@ -1,20 +1,29 @@
 import spotipy
 from spotipy.oauth2 import SpotifyPKCE
-import json, os
+import json, os, random
 from dotenv import load_dotenv
+
+# Importamos el modulo de IA
+import taste_profile
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Get the credentials from environment variables
 client_id = os.getenv('SPOTIPY_CLIENT_ID')
-client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
 redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
 
 # Set up Spotify API credentials and authenticate
-sp = spotipy.Spotify(auth_manager=SpotifyPKCE(client_id=client_id,
-                                              redirect_uri=redirect_uri,
-                                              scope=['playlist-modify-public', 'playlist-modify-private', 'playlist-read-private', 'user-top-read']))
+auth_manager=SpotifyPKCE(
+    client_id=client_id,
+    redirect_uri=redirect_uri,
+    scope='playlist-modify-public playlist-modify-private playlist-read-private user-top-read'
+)
+
+token_info = auth_manager.get_access_token()
+token = token_info['access_token'] if isinstance(token_info, dict) else token_info
+
+sp = spotipy.Spotify(auth=token)
 
 # Cargar configuración desde el archivo JSON
 def load_config():
@@ -102,7 +111,7 @@ def get_playlist_episodes(sp, playlist_id):
 
 
 def get_favorite_tracks(sp, total_needed):
-    """Obtiene las canciones más escuchadas del usuario en el corto plazo."""
+    """Obtiene las canciones más escuchadas del usuario en un lapso de tiempo(personalizable): short_term,."""
     try:
         print(f"🎵 Buscando {total_needed} canciones favoritas...")
         # time_range='short_term' trae lo que más has escuchado en las últimas 4 semanas
@@ -119,6 +128,39 @@ def get_favorite_tracks(sp, total_needed):
         print(f"⚠️ Error al obtener tus canciones favoritas: {e}")
         return []
 
+def get_discovery_tracks(sp, genres, total_needed):
+    """Busca canciones nuevas en Spotify basandose en las etiquetas de Gemini."""
+    try:
+        print(f"🎵 Buscando {total_needed} canciones nuevas basandose en IA..")
+        track_uris=[]
+
+        if not genres:
+            print("⚠️ No se recibieron géneros de la IA.Tomando el Flujo Clasico...")
+            return get_favorite_tracks(sp, total_needed)
+
+        # Calculando cuantas canciones buscar por cada genero para tern variedad
+        limit_per_genre = max(1, (total_needed // len(genres)) + 2)
+
+        for genre in genres:
+            # Buscando entodo Spotify usando el filtro de género especifico
+            query = f'genre: "{genre}"'
+            results = sp.search(q=query, type='track', limit=limit_per_genre)
+
+            for item in results['tracks']['items']:
+                track_uris.append(item['uri'])
+
+        # Eliminamos canciones duplicadas(por si un artista encaja en dos generos
+        track_uris  = list(set(track_uris))
+
+        # Mezclamos la lista de forma aleatoria para que los generos no queden agrupados
+        random.shuffle(track_uris)
+
+        # Cortamos la lista para devolver exactamente el numero que necesitamos
+        return  track_uris[:total_needed]
+
+    except Exception as e:
+        print(f"⚠️ Error al buscar canciones para descubrimiento: {e}")
+        return []
 
 def build_ruta_diaria(episode_uris, track_uris, tracks_per_episode=5):
     """Intercala episodios y canciones en un solo arreglo."""
@@ -185,10 +227,22 @@ def main():
         # Calculamos cuántas canciones necesitamos en total (5 por cada episodio encontrado)
         canciones_necesarias = len(episode_ids) * 5
 
-        # Obtenemos ese número exacto de canciones favoritas
-        mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
+        # ==================================================
+        # SELECCIÓN DEL FLUJO MUSICAL
+        # ==================================================
 
-        # Armamos la lista final mezclada
+        # OPCION 1
+        # Extrea tus generos con Gemini y busca musica 100% nueva
+        mis_generos = taste_profile.main_ai_profile(sp)
+        mis_canciones = get_discovery_tracks(sp, mis_generos, canciones_necesarias)
+
+        # OPCION 2
+        # Si prefieres escuchar tus canciones mas repetidas descomenta las linea de arriba y descomenta la linea de abajo
+        # Obtenemos ese número exacto de canciones favoritas
+        # mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
+
+        # =================================================
+
         lista_final = build_ruta_diaria(episode_ids, mis_canciones, tracks_per_episode=5)
 
         # Actualizamos la playlist con el nuevo arreglo mixto
