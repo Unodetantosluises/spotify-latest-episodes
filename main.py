@@ -233,13 +233,13 @@ def main():
 
         # OPCION 1
         # Extrea tus generos con Gemini y busca musica 100% nueva
-        mis_generos = taste_profile.main_ai_profile(sp)
-        mis_canciones = get_discovery_tracks(sp, mis_generos, canciones_necesarias)
+        # mis_generos = taste_profile.main_ai_profile(sp)
+        # mis_canciones = get_discovery_tracks(sp, mis_generos, canciones_necesarias)
 
         # OPCION 2
         # Si prefieres escuchar tus canciones mas repetidas descomenta las linea de arriba y descomenta la linea de abajo
         # Obtenemos ese número exacto de canciones favoritas
-        # mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
+        mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
 
         # =================================================
 
