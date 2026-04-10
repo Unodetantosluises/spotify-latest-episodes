@@ -1,0 +1,10 @@
+services: 
+  mi-ruta-diaria:
+    build: .
+    container_name: spotify_ruta_diaria
+    restart: "no" # La aplicacion solo correra una vez
+    env_file:
+      - .env
+    volumes:
+      - ./.cache:/app/.cache # Es necesario para guardar el token de acceso y evitar solicitarlo cada vez
+      - ./config.json:/app/config.json # Montamos el archivo de configuración para que la aplicación pueda leerlo
