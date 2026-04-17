@@ -18,7 +18,7 @@ jobs:
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
-      
+
       - name: Inyectar Caché de Spotify
         run: echo '${{ secrets.SPOTIPY_CACHE }}' > .cache
 
@@ -27,3 +27,4 @@ jobs:
         env:
           SPOTIPY_CLIENT_ID: ${{ secrets.SPOTIPY_CLIENT_ID }}
           SPOTIPY_REDIRECT_URI: ${{ secrets.SPOTIPY_REDIRECT_URI }}
+          SPOTIPY_CLIENT_SECRET: ${{ secrets.SPOTIPY_CLIENT_SECRET }}
