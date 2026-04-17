@@ -14,10 +14,13 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10' # O la versión que uses
+          python-version: '3.10'
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
+      
+      - name: Inyectar Caché de Spotify
+        run: echo '${{ secrets.SPOTIPY_CACHE }}' > .cache
 
       - name: Correr script
         run: python main.py
