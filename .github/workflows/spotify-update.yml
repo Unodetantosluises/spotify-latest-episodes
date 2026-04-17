@@ -22,5 +22,5 @@ jobs:
       - name: Correr script
         run: python main.py
         env:
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIPY_CLIENT_ID }}
+          SPOTIFY_SECRET: ${{ secrets.SPOTIPY_CLIENT_SECRET }}
