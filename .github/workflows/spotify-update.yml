@@ -1,0 +1,27 @@
+name: Actualizar Playlist Spotify
+on:
+  schedule:
+    - cron: '0 11,18 * * 1-5' # lunes a viernes (Ajustado a UTC)
+  workflow_dispatch:
+
+jobs:
+  run-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # O la versión que uses
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Correr script
+        run: python ruta_diaria.py
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}

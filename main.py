@@ -4,7 +4,7 @@ import json, os, random
 from dotenv import load_dotenv
 
 # Importamos el modulo de IA
-import taste_profile
+# import taste_profile
 
 # Load environment variables from .env file
 load_dotenv()
