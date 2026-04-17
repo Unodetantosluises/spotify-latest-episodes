@@ -20,7 +20,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Correr script
-        run: python ruta_diaria.py
+        run: python main.py
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
