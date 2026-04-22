@@ -1,5 +1,5 @@
 import spotipy
-from spotipy.oauth2 import SpotifyPKCE
+from spotipy.oauth2 import SpotifyOAuth
 import json, os, random
 from dotenv import load_dotenv
 
@@ -11,11 +11,13 @@ load_dotenv()
 
 # Get the credentials from environment variables
 client_id = os.getenv('SPOTIPY_CLIENT_ID')
+client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
 redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
 
 # Set up Spotify API credentials and authenticate
-auth_manager=SpotifyPKCE(
+auth_manager = SpotifyOAuth(
     client_id=client_id,
+    client_secret=client_secret,
     redirect_uri=redirect_uri,
     scope='playlist-modify-public playlist-modify-private playlist-read-private user-top-read'
 )
@@ -111,7 +113,7 @@ def get_playlist_episodes(sp, playlist_id):
 
 
 def get_favorite_tracks(sp, total_needed):
-    """Obtiene las canciones más escuchadas del usuario en un lapso de tiempo(personalizable): short_term,."""
+    """Obtiene las canciones más escuchadas del usuario en un lapso de tiempo(personalizable): short_term."""
     try:
         print(f"🎵 Buscando {total_needed} canciones favoritas...")
         # time_range='short_term' trae lo que más has escuchado en las últimas 4 semanas
@@ -237,7 +239,7 @@ def main():
         # mis_canciones = get_discovery_tracks(sp, mis_generos, canciones_necesarias)
 
         # OPCION 2
-        # Si prefieres escuchar tus canciones mas repetidas descomenta las linea de arriba y descomenta la linea de abajo
+        # Si prefieres escuchar tus canciones más repetidas descomenta las linea de arriba y descomenta la linea de abajo
         # Obtenemos ese número exacto de canciones favoritas
         mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
 
