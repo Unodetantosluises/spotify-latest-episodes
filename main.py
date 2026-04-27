@@ -22,10 +22,7 @@ auth_manager = SpotifyOAuth(
     scope='playlist-modify-public playlist-modify-private playlist-read-private user-top-read'
 )
 
-token_info = auth_manager.get_access_token()
-token = token_info['access_token'] if isinstance(token_info, dict) else token_info
-
-sp = spotipy.Spotify(auth=token)
+sp = spotipy.Spotify(auth_manager=auth_manager)
 
 # Cargar configuración desde el archivo JSON
 def load_config():
