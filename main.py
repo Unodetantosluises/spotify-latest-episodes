@@ -1,5 +1,6 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import datetime
 import json, os, random
 from dotenv import load_dotenv
 
@@ -83,7 +84,7 @@ def get_recent_episodes_from_podcast(sp, podcast_id):
         return []
 
 def get_playlist_episodes(sp, playlist_id):
-    """Obtiene las URIs de los episodios actuales de la playlist."""
+    """Obtiene las URL de los episodios actuales de la playlist."""
     try:
         # Obtenemos las pistas de la playlist
         episodes = sp.playlist_items(playlist_id)
@@ -93,7 +94,7 @@ def get_playlist_episodes(sp, playlist_id):
             print(f"⚠️ No se encontraron episodios en la playlist {playlist_id}.")
             return []
         
-        # Extraemos solo las URIs de los episodios (campo 'uri' dentro de 'track' o 'episode')
+        # Extraemos solo las URL de los episodios (campo 'uri' dentro de 'track' o 'episode')
         episode_uris = [
             episode['track']['uri'] if episode.get('track') else episode['episode']['uri']
             for episode in episodes['items']
@@ -107,7 +108,6 @@ def get_playlist_episodes(sp, playlist_id):
     except Exception as e:
         print(f"⚠️ Error inesperado al obtener episodios de la playlist: {e}")
         return []
-
 
 def get_favorite_tracks(sp, total_needed):
     """Obtiene las canciones más escuchadas del usuario en un lapso de tiempo(personalizable): short_term."""
@@ -128,7 +128,7 @@ def get_favorite_tracks(sp, total_needed):
         return []
 
 def get_discovery_tracks(sp, genres, total_needed):
-    """Busca canciones nuevas en Spotify basandose en las etiquetas de Gemini."""
+    """Busca canciones nuevas en Spotify basándose en las etiquetas de Gemini."""
     try:
         print(f"🎵 Buscando {total_needed} canciones nuevas basandose en IA..")
         track_uris=[]
@@ -137,24 +137,24 @@ def get_discovery_tracks(sp, genres, total_needed):
             print("⚠️ No se recibieron géneros de la IA.Tomando el Flujo Clasico...")
             return get_favorite_tracks(sp, total_needed)
 
-        # Calculando cuantas canciones buscar por cada genero para tern variedad
+        # Calculando cuantas canciones buscar por cada género para tern variedad
         limit_per_genre = max(1, (total_needed // len(genres)) + 2)
 
         for genre in genres:
-            # Buscando entodo Spotify usando el filtro de género especifico
+            # Buscando en todo Spotify usando el filtro de género específico
             query = f'genre: "{genre}"'
             results = sp.search(q=query, type='track', limit=limit_per_genre)
 
             for item in results['tracks']['items']:
                 track_uris.append(item['uri'])
 
-        # Eliminamos canciones duplicadas(por si un artista encaja en dos generos
+        # Eliminamos canciones duplicadas(por si un artista encaja en dos géneros
         track_uris  = list(set(track_uris))
 
-        # Mezclamos la lista de forma aleatoria para que los generos no queden agrupados
+        # Mezclamos la lista de forma aleatoria para que los géneros no queden agrupados
         random.shuffle(track_uris)
 
-        # Cortamos la lista para devolver exactamente el numero que necesitamos
+        # Cortamos la lista para devolver exactamente el número que necesitamos
         return  track_uris[:total_needed]
 
     except Exception as e:
@@ -199,6 +199,42 @@ def update_playlist(sp, playlist_id, episode_ids):
     except Exception as e:
         print(f"⚠️ Error al actualizar la playlist: {e}")
 
+def save_weekly_stats_if_friday(sp):
+    """Obtiene el top 40 de la semana y lo guarda en un .md si es viernes"""
+    today = datetime.datetime.now()
+
+    # En Python, el lunes es 0 y el viernes es 4
+    if today.weekday() == 4:
+        try:
+            print("Es viernes!! Recopilando tu top 40 semanal...")
+            results = sp.current_user_top_tracks(limit=40, time_range='short_term')
+
+            if not results or 'items' not in results:
+                print("No se encontraron canciones para las estadísticas.")
+                return
+
+            date_str = today.strftime("%Y-%m-%d")
+            # Guardaremos todo ordenado en una carpeta 'stas'
+            os.makedirs('stats', exist_ok=True)
+            filename = f"stas/top_40_{date_str}.md"
+
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(f"# Top 40 - Semana de {date_str}\n\n")
+                f.write("| Rank | Canción | Artista | Album |\n")
+                f.write("|---|---|---|---|---|\n")
+
+                for i, track in enumerate(results['items'], 1):
+                    name = track['name'],
+                    artist = track['artists'][0]['name'],
+                    album = track['album']['name'],
+                    f.write(f"| {i} | {name} | {artist} | {album} |\n")
+
+                print(f"Estadisticas guardadas exitosamente en {filename}.")
+        except Exception as e:
+                print(f"Error al guardar estadisticas: {e}")
+    else:
+        print("Hoy no es viernes, omitiendo la recolección de estadísticas.")
+
 def main():
 
     # Remove the status.log file
@@ -230,13 +266,13 @@ def main():
         # SELECCIÓN DEL FLUJO MUSICAL
         # ==================================================
 
-        # OPCION 1
-        # Extrea tus generos con Gemini y busca musica 100% nueva
+        # OPCIÓN 1
+        # Extrae tus géneros con Gemini y busca música 100% nueva
         # mis_generos = taste_profile.main_ai_profile(sp)
         # mis_canciones = get_discovery_tracks(sp, mis_generos, canciones_necesarias)
 
-        # OPCION 2
-        # Si prefieres escuchar tus canciones más repetidas descomenta las linea de arriba y descomenta la linea de abajo
+        # OPCIÓN 2
+        # Si prefieres escuchar tus canciones más repetidas descomenta las líneas de arriba y descomenta la línea de abajo
         # Obtenemos ese número exacto de canciones favoritas
         mis_canciones = get_favorite_tracks(sp, canciones_necesarias)
 
@@ -246,6 +282,7 @@ def main():
 
         # Actualizamos la playlist con el nuevo arreglo mixto
         update_playlist(sp, PLAYLIST_ID, lista_final)
+        save_weekly_stats_if_friday(sp)
     else:
         print("⚠️ No se obtuvieron episodios para actualizar la playlist.")
 

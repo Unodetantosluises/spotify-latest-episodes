@@ -1,12 +1,14 @@
 name: Actualizar Playlist Spotify
 on:
   schedule:
-    - cron: '0 11,18 * * 1-5' # lunes a viernes (Ajustado a UTC)
+    - cron: '0 11,23 * * 1-5' # lunes a viernes (Ajustado a UTC)
   workflow_dispatch:
 
 jobs:
   run-update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
@@ -28,3 +30,13 @@ jobs:
           SPOTIPY_CLIENT_ID: ${{ secrets.SPOTIPY_CLIENT_ID }}
           SPOTIPY_REDIRECT_URI: ${{ secrets.SPOTIPY_REDIRECT_URI }}
           SPOTIPY_CLIENT_SECRET: ${{ secrets.SPOTIPY_CLIENT_SECRET }}
+
+      - name: Commit y Push de estadísticas semanales
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add stats/*.md || true
+          
+          git diff-index --quiet HEAD || git commit -m "Estadísticas semanales generadas [skip ci]"
+          git push
