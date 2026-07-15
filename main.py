@@ -1,6 +1,6 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import datetime
+import datetime, sys
 import json, os, random
 from dotenv import load_dotenv
 
@@ -201,39 +201,43 @@ def update_playlist(sp, playlist_id, episode_ids):
 
 def save_weekly_stats_if_friday(sp):
     """Obtiene el top 40 de la semana y lo guarda en un .md si es viernes"""
-    today = datetime.datetime.now()
+    today = datetime.datetime.now(datetime.UTC)
 
     # En Python, el lunes es 0 y el viernes es 4
-    if today.weekday() == 4:
-        try:
-            print("Es viernes!! Recopilando tu top 40 semanal...")
-            results = sp.current_user_top_tracks(limit=40, time_range='short_term')
+    if today.weekday() != 4:
+        print("🗓️ Hoy no es viernes, omitiendo la recolección de estadísticas.")
+        return False
 
-            if not results or 'items' not in results:
-                print("No se encontraron canciones para las estadísticas.")
-                return
+    try:
+        print("Es viernes!! Recopilando tu top 40 semanal...")
+        results = sp.current_user_top_tracks(limit=40, time_range='short_term')
 
-            date_str = today.strftime("%Y-%m-%d")
-            # Guardaremos todo ordenado en una carpeta 'stas'
-            os.makedirs('stats', exist_ok=True)
-            filename = f"stas/top_40_{date_str}.md"
+        if not results or 'items' not in results:
+            print("No se encontraron canciones para las estadísticas.")
+            return False
 
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(f"# Top 40 - Semana de {date_str}\n\n")
-                f.write("| Rank | Canción | Artista | Album |\n")
-                f.write("|---|---|---|---|---|\n")
+        date_str = today.strftime("%Y-%m-%d")
+        # Guardaremos todo ordenado en una carpeta 'stas'
+        os.makedirs('stats', exist_ok=True)
+        filename = f"stas/top_40_{date_str}.md"
 
-                for i, track in enumerate(results['items'], 1):
-                    name = track['name'],
-                    artist = track['artists'][0]['name'],
-                    album = track['album']['name'],
-                    f.write(f"| {i} | {name} | {artist} | {album} |\n")
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(f"# Top 40 - Semana de {date_str}\n\n")
+            f.write("| Rank | Canción | Artista | Album |\n")
+            f.write("|---|---|---|---|---|\n")
 
-                print(f"Estadisticas guardadas exitosamente en {filename}.")
-        except Exception as e:
-                print(f"Error al guardar estadisticas: {e}")
-    else:
-        print("Hoy no es viernes, omitiendo la recolección de estadísticas.")
+            for i, track in enumerate(results['items'], 1):
+                name = track['name'],
+                artist = track['artists'][0]['name'],
+                album = track['album']['name'],
+                f.write(f"| {i} | {name} | {artist} | {album} |\n")
+
+        print(f"Estadisticas guardadas exitosamente en {filename}.")
+        return True
+
+    except Exception as e:
+        print(f"Error al guardar estadisticas: {e}", file=sys.stderr)
+        return False
 
 def main():
 
