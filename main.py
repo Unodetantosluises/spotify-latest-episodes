@@ -219,12 +219,12 @@ def save_weekly_stats_if_friday(sp):
         date_str = today.strftime("%Y-%m-%d")
         # Guardaremos todo ordenado en una carpeta 'stas'
         os.makedirs('stats', exist_ok=True)
-        filename = f"stas/top_40_{date_str}.md"
+        filename = f"stats/top_40_{date_str}.md"
 
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(f"# Top 40 - Semana de {date_str}\n\n")
             f.write("| Rank | Canción | Artista | Album |\n")
-            f.write("|---|---|---|---|---|\n")
+            f.write("|---|---|---|---|\n")
 
             for i, track in enumerate(results['items'], 1):
                 name = track['name'],

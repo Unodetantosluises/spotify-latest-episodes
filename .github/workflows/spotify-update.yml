@@ -41,9 +41,9 @@ jobs:
           
           git add stats/*.md 2>/dev/null || true
           
-          if [ -n "$(git status --porcelain)" ]; then
+          if ! git diff --staged --quiet; then
             git commit -m "Estadísticas semanales generadas [skip ci]"
             git push
           else
-            echo "No hay cambios en stats/*.md — nada que commitear."
+            echo "No hay cambios nuevos en stats/ para commitear hoy."
           fi
