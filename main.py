@@ -201,7 +201,7 @@ def update_playlist(sp, playlist_id, episode_ids):
 
 def save_weekly_stats_if_friday(sp):
     """Obtiene el top 40 de la semana y lo guarda en un .md si es viernes"""
-    today = datetime.datetime.now(datetime.UTC)
+    today = datetime.datetime.now(datetime.timezone.utc)
 
     # En Python, el lunes es 0 y el viernes es 4
     if today.weekday() != 4:
@@ -217,7 +217,7 @@ def save_weekly_stats_if_friday(sp):
             return False
 
         date_str = today.strftime("%Y-%m-%d")
-        # Guardaremos todo ordenado en una carpeta 'stas'
+        # Guardaremos todo ordenado en una carpeta 'stats'
         os.makedirs('stats', exist_ok=True)
         filename = f"stats/top_40_{date_str}.md"
 
@@ -227,9 +227,9 @@ def save_weekly_stats_if_friday(sp):
             f.write("|---|---|---|---|\n")
 
             for i, track in enumerate(results['items'], 1):
-                name = track['name'],
-                artist = track['artists'][0]['name'],
-                album = track['album']['name'],
+                name = track['name']
+                artist = track['artists'][0]['name']
+                album = track['album']['name']
                 f.write(f"| {i} | {name} | {artist} | {album} |\n")
 
         print(f"Estadisticas guardadas exitosamente en {filename}.")
